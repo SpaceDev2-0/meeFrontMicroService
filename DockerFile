@@ -1,0 +1,7 @@
+FROM node:14.18.0
+WORKDIR /
+COPY package*.json ./
+RUN npm install --force
+COPY . .
+EXPOSE 3002
+CMD ["npm", "start"]
